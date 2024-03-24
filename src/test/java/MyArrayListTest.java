@@ -58,9 +58,10 @@ public class MyArrayListTest  {
         boolean result=false;
         int oldSize= list.size();
         int index = 1;
-        list.add(index,item);
-        for(int i=0; i< list.size();i++){
-            if(list.get(i).equals(item) && list.size()==oldSize+1){
+        myArray.addAll(list);
+        myArray.add(index,item);
+        for(int i=0; i< myArray.size();i++){
+            if(myArray.get(i).equals(item) && myArray.size()==oldSize+1){
                 result=true;
                 break;
             }
@@ -72,11 +73,12 @@ public class MyArrayListTest  {
 
     @Test
     public void indexOfElementShould(){
-        addByIndexElementShouldDone();
+        myArray.addAll(list);
+        String tmp="Cantaloupe";
         boolean result=false;
-        int indexE=list.indexOf(item);
-        for (int i=0; i< list.size(); i++){
-            if(i == indexE && list.get(i).equals(item)){
+        int indexE=myArray.indexOf(tmp);
+        for (int i=0; i< myArray.size(); i++){
+            if(i == indexE && myArray.get(i).equals(tmp)){
                 result=true;
                 break;
             }
