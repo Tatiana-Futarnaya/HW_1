@@ -15,7 +15,7 @@ public class Main {
         public static void main(String[] args) {
 
         ArrayList<String> list=new ArrayList<>(Arrays.asList("Mercedes","Volkswagen"));
-        MyArrayList<String> myArrayList=new MyArrayList<>(String.class, 0);
+        MyArrayList<String> myArrayList=new MyArrayList<>();
 
 
         myArrayList.addAll(list);
@@ -37,7 +37,7 @@ public class Main {
         ArrayList<String> tmpList=new ArrayList<>(Arrays.asList("Watermelon", "Cantaloupe", "Horned", "Crenshaw", "Honeydew",
                 "Gac", "Bitter", "Winter", "Sprite", "Korean", "Canary", "Charentais"));
 
-        MyArrayList<String> arrayList=new MyArrayList<>(String.class, 0);
+        MyArrayList<String> arrayList=new MyArrayList<>();
         arrayList.addAll(tmpList);
 
         logger.log(Level.INFO, arrayList::toString);

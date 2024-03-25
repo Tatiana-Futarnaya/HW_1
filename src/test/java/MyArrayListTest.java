@@ -25,12 +25,12 @@ public class MyArrayListTest  {
 
     @Before
     public void creatMyArrayList(){
-        myArray=new MyArrayList<>(String.class,0);
+        myArray=new MyArrayList<>();
     }
 
     @Test
     public void testConstructor(){
-        MyArray<String> array=new MyArrayList<>(String.class,0);
+        MyArray<String> array=new MyArrayList<>();
         Assert.assertNotNull(array);
     }
 
@@ -38,7 +38,7 @@ public class MyArrayListTest  {
     public void addAllShouldValues(){
         ArrayList<String> arrayList= new ArrayList<>(Arrays.asList("Mercedes","Volkswagen"));
         myArray.addAll(arrayList);
-        MyArray<String> expectedList=new MyArrayList<>(String.class, 0);
+        MyArray<String> expectedList=new MyArrayList<>();
         expectedList.addAll(arrayList);
         Assert.assertNotNull(myArray);
         Assert.assertEquals(myArray, expectedList);
@@ -93,7 +93,7 @@ public class MyArrayListTest  {
     @Test
     public void deleteShouldByElement(){
         myArray.addAll(list);
-        MyArray<String> expectedList=new MyArrayList<>(String.class, 0);
+        MyArray<String> expectedList=new MyArrayList<>();
         expectedList.addAll(list);
 
         Assert.assertEquals(myArray,expectedList);
@@ -136,7 +136,7 @@ public class MyArrayListTest  {
     public void sortShouldDone(){
         myArray.addAll(list);
         myArray.sort();
-        MyArray<String> expectedList=new MyArrayList<>(String.class, 0);
+        MyArray<String> expectedList=new MyArrayList<>();
         list.sort(Comparator.naturalOrder());
         expectedList.addAll(list);
 
@@ -159,7 +159,7 @@ public class MyArrayListTest  {
     public void quickSortWithComparableShouldDone(){
         myArray.addAll(list);
         QuickSort.quickSort(myArray);
-        MyArray<String> expectedList=new MyArrayList<>(String.class, 0);
+        MyArray<String> expectedList=new MyArrayList<>();
         list.sort(Comparator.naturalOrder());
         expectedList.addAll(list);
         Assert.assertEquals(expectedList,myArray);
@@ -169,7 +169,7 @@ public class MyArrayListTest  {
     public void quickSortWithComparatorShouldDone(){
         myArray.addAll(list);
         QuickSort.quickSort(myArray, Comparator.naturalOrder());
-        MyArray<String> expectedList=new MyArrayList<>(String.class, 0);
+        MyArray<String> expectedList=new MyArrayList<>();
         list.sort(Comparator.naturalOrder());
         expectedList.addAll(list);
         Assert.assertEquals(expectedList,myArray);

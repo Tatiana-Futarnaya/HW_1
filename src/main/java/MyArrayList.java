@@ -16,8 +16,8 @@ public class MyArrayList<E>  implements MyArray<E> {
      * Создает новый объект MyArrayList без указанния значений.
      */
     @SuppressWarnings("unchecked")
-    public MyArrayList(Class<E> clazz, int capacity) {
-        values = (E[]) Array.newInstance(clazz, capacity);
+    public MyArrayList() {
+        values =(E[]) new Object[0];
     }
 
     @Override
